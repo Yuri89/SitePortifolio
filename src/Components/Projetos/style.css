@@ -1,0 +1,294 @@
+.projetos-content {
+    position: relative;
+    width: 100%;
+    display: flex;
+    padding: 20px 0;
+    background-color: #090d0f;
+    text-align: center;
+}
+
+.projetos-title {
+    position: relative;
+    z-index: 1;
+    height: 140px;
+}
+
+.projetos-title>h2 {
+    position: relative;
+    color: #ffffff;
+    font-size: 3.5rem;
+}
+
+.projetos-overflow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 40px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.projetos-box {
+    position: relative;
+    border: 2px solid #ffffff;
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    height: 70%;
+}
+
+.projetos-box::after {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 100px;
+    border-bottom: #ffffff 2px solid;
+    top: -45px;
+    right: -55px;
+    transform: rotate(45deg);
+    background-color: #090D0F;
+    /* mesma cor do fundo da página */
+}
+
+.projetos-box::before {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 100px;
+    border-bottom: #ffffff 2px solid;
+    bottom: -45px;
+    left: -55px;
+    transform: rotate(-135deg);
+    background-color: #090D0F;
+    /* mesma cor do fundo da página */
+}
+
+
+
+.projetos-cards {
+    width: 80%;
+    position: relative;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.cards-overflow {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.decorate-first {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 60px;
+    border-bottom: #ffffff 1px solid;
+    bottom: -35px;
+    left: -30px;
+    transform: rotate(-135deg);
+    background-color: #090D0F;
+    /* mesma cor do fundo da página */
+}
+
+.card {
+    position: relative;
+    padding: 30px 20px;
+    width: 200px;
+    height: 250px;
+    box-shadow: 0px 0px 0px 1px #ffffff inset;
+    overflow: hidden;
+
+}
+
+.title-card{
+    font-size: 1.5rem;
+
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 35px;
+    border-bottom: #ffffff 1px solid;
+    bottom: -10px;
+    left: -22px;
+    transform: rotate(-135deg);
+    background-color: #090D0F;
+    /* mesma cor do fundo da página */
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 35px;
+    border-bottom: #ffffff 1px solid;
+    top: -10px;
+    right: -22px;
+    transform: rotate(45deg);
+    background-color: #090D0F;
+    /* mesma cor do fundo da página */
+}
+
+.description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: auto;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    padding: 10px;
+    box-sizing: border-box;
+
+    &>p {
+        font-size: 14px;
+    }
+}
+
+.description-hover {
+    opacity: 1;
+}
+
+/* ===== Scroll Global Reset ===== */
+.scrool {
+    overflow-y: auto;
+    /* ativa o scroll vertical */
+    max-height: 150px;
+    /* ajuste o limite de altura */
+
+    /* Firefox */
+    scrollbar-width: thin;
+    /* auto | thin | none */
+    scrollbar-color: #ffffff transparent;
+    /* thumb | track */
+}
+
+/* ===== Scroll Webkit (Chrome, Edge, Safari, Opera) ===== */
+.scrool::-webkit-scrollbar {
+    width: 6px;
+    /* largura da barra */
+    height: 6px;
+    /* altura (scroll horizontal, se houver) */
+}
+
+.scrool::-webkit-scrollbar-track {
+    background: transparent;
+    /* trilho transparente */
+    border-radius: 4px;
+}
+
+.scrool::-webkit-scrollbar-thumb {
+    background-color: #ffffffd8;
+    /* cor da “pegada” */
+    border-radius: 4px;
+    border: 1px solid transparent;
+    /* cria respiro ao redor */
+}
+
+.scrool::-webkit-scrollbar-thumb:hover {
+    background-color: #ffffff;
+    /* cor quando passa o mouse */
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+}
+
+.ajuda {
+    width: 25px;
+    height: 25px;
+    background-color: #ffffff;
+    color: #000000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: default;
+    user-select: none;
+}
+
+.mensagem{
+    display: none;
+    position: absolute;
+    width: 220px;
+    background-color: rgba(48, 48, 48, 0.123);
+    backdrop-filter: blur(15px);
+    padding: 20px;
+
+    top: 20px;
+    right: 10px;
+    border-radius: 20px;
+}
+
+.active{
+    display: block;
+}
+
+@media (max-width: 1238px) {
+    .tooltip{
+        display: flex;
+    }
+    .projetos-content {
+        height: auto;
+        padding: 40px 0;
+    }
+
+    .projetos-box {
+        width: 80%;
+        height: auto;
+        padding: 40px 20px;
+    }
+
+    .projetos-cards {
+        width: 80%;
+    }
+
+    .card {
+        width: 100%;
+        height: 300px;
+    }
+}
+
+@media (max-width: 1054px) {
+    .projetos-cards {
+        flex-direction: column;
+        width: 80%;
+        height: auto;
+    }
+
+}
+
+@media (max-width: 480px) {
+    
+    .card {
+        width: 100%;
+        height: 200px;
+    }
+}

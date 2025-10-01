@@ -1,0 +1,171 @@
+.banner-container {
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    flex-direction: row;
+    background-color: #080F13;
+    z-index: -5;
+
+}
+
+.stripes {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -5;
+}
+
+.banner-container-x {
+    position: relative;
+    padding: 0px 120px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    top: -50px;
+}
+
+.shieldlogo {
+    position: relative;
+    width: 500px;
+}
+
+.shieldlogo svg {
+    transform: translate(-15%);
+    filter: drop-shadow(0 0 5px #00aaff) drop-shadow(0 0 10px #00aaff);
+}
+
+.stripe-one {
+    /* Rectangle 28 */
+
+    position: absolute;
+    width: 356.2px;
+    height: 1196.74px;
+    left: 35%;
+    top: -60%;
+
+    background: linear-gradient(180.89deg, #091115 20.2%, rgba(0, 0, 0, 0) 60.1%, #091115 99.24%), radial-gradient(74.49% 74.49% at 86.54% 56.56%, #0F4366 0%, #080F13 100%)
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+    ;
+    transform: rotate(22.56deg);
+
+    z-index: -2;
+
+}
+
+.stripe-two {
+    /* Rectangle 32 */
+
+    position: absolute;
+    width: 356.2px;
+    height: 1196.74px;
+    left: 55%;
+    top: -60%;
+
+    background: linear-gradient(180.89deg, #091115 20.2%, rgba(0, 0, 0, 0) 60.1%, #091115 99.24%), radial-gradient(79.79% 80.26% at 105.83% 50.8%, #0F4366 0%, #080F13 100%)
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+    ;
+    transform: rotate(22.56deg);
+    z-index: -3;
+}
+
+.stripe-three {
+    /* Rectangle 31 */
+
+    position: absolute;
+    width: 356.2px;
+    height: 1196.74px;
+    left: 15%;
+    top: -60%;
+
+    background: linear-gradient(180.89deg, #091115 20.2%, rgba(0, 0, 0, 0) 60.1%, #091115 99.24%), radial-gradient(45.92% 46.75% at 81.27% 40.17%, #0F4366 0%, #080F13 100%)
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+    ;
+    transform: rotate(22.56deg);
+    z-index: -1;
+}
+
+.banner-text {
+    width: 100%;
+    position: relative;
+}
+
+.text-banner {
+    width: 100%;
+    top: 50px;
+    position: absolute;
+    font-family: "NicoMoji", sans-serif;
+    display: inline-block;
+    font-size: calc(var(--font-h2) / 1.5);
+}
+
+.text-banner:nth-child(1) {
+    top: -100px;
+    width: 100vw;
+    color: #ffffff;
+    font-size: var(--font-h1);
+    line-height: 1.2;
+    text-align: left;
+    z-index: 1;
+}
+
+@media (max-width: 1285px) {
+    .banner-container-x {
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .shieldlogo {
+        position: absolute;
+        width: 500px;
+        z-index: -1;
+    }
+
+    .banner-text {
+        display: flex;
+    }
+
+    .text-banner {
+        text-align: center;
+    }
+
+    .text-banner:nth-child(1) {
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 784px) {
+    .banner-container-x {}
+
+    .shieldlogo {}
+
+    .banner-text {}
+
+    .text-banner {}
+
+    .text-banner:nth-child(1) {}
+
+    .stripe-two {
+        display: none;
+    }
+
+    .stripe-three {
+        display: none;
+    }
+
+}
+
+@media (max-width: 639px) {
+        .text-banner {
+    top: clamp(-20px, 0vw - 100px, 40px);
+    }
+
+}

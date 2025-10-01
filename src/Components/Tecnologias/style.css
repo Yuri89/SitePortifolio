@@ -1,0 +1,57 @@
+.tecnologias-content {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tecnologias-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.tecnologia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px 15px;
+    border: 1px solid #ffffff;
+
+    font-size: 18px;
+
+    &>svg {
+        width: 100px;
+        height: 100px;
+        fill: #ffffff;
+    }
+}
+
+@media (max-width: 900px) {
+    .tecnologias-content {
+        width: 100vw;
+        height: auto;
+        padding: 40px 0;
+    }
+
+    .tecnologias-box {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .tecnologia{
+            border-right: 2px solid #ffffff;
+            border-bottom: 2px solid #ffffff;
+    }
+}
+
+@media (max-width: 600px) {
+    .tecnologias-box {
+        grid-template-columns: 1fr;
+    }
+
+    .tecnologia{
+            border-right: 1px solid #ffffff;
+            border-bottom: 1px solid #ffffff;
+    }
+}

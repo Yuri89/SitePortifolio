@@ -1,0 +1,70 @@
+@font-face {
+  font-family: "NicoMoji";
+  src: url("./Assets/fonts/NicoMoji-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #0B1114;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Corpo do texto */
+  --font-body: clamp(1rem, 3vw, 1.2rem);
+
+  /* Hierarquia de títulos */
+  --font-h1: clamp(3rem, 10vw, 5.5rem);
+  --font-h2: clamp(2rem, 5vw, 1.5rem);
+  --font-h3: clamp(1rem, 5vw, 1.2rem);
+}
+
+h1,
+h2 {
+  font-size: var(--font-h1);
+}
+
+h3 {
+  font-size: var(--font-h2);
+}
+
+h4,
+h5,
+h6 {
+  font-size: var(--font-h3);
+}
+
+p,
+span,
+li,
+a,
+button {
+  font-size: var(--font-body);
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

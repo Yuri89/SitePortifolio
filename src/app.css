@@ -1,0 +1,14 @@
+.app{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title{
+    font-family: 'NicoMoji', sans-serif;
+}
+
+
+.overflow-hidden{
+    overflow: hidden;    
+}

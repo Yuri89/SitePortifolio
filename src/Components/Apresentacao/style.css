@@ -1,0 +1,88 @@
+.apresentacao-content {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+}
+
+.apresentacao-box {
+    position: relative;
+    width: 70%;
+    height: 70%;
+    border: 2px solid #ffffff;
+    padding: 40px;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.apresentacao-box::after {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 100px;
+    border-bottom: #ffffff 2px solid;
+    top: -45px;
+    right: -55px;
+    transform: rotate(45deg);
+    background-color: #0B1114;
+    /* mesma cor do fundo da página */
+}
+
+.foto {
+    padding-left: 50px;
+}
+
+
+
+@media (max-width: 1213px) {
+    .apresentacao-content {
+        height: auto;
+        padding: 40px 0;
+    }
+
+    .apresentacao-box {
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .foto {
+        width: 70%;
+        padding: none;
+    }
+
+    .foto img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 806px) {
+    .apresentacao-content {
+        width: 100vw;
+        padding: 20px 0;
+        display: block;
+    }
+
+    .apresentacao-box {
+        width: 60%;
+        /* ocupa 90% da largura da tela */
+        height: auto;
+        /* altura conforme conteúdo */
+        padding: 50px 10%;
+        /* reduz o padding */
+        margin: 0 auto;
+        /* centraliza horizontalmente */
+    }
+
+    .foto {
+        width: 100%;
+        /* ocupa toda a largura */
+        padding: 0;
+    }
+}

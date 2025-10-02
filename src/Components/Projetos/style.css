@@ -1,6 +1,6 @@
 .projetos-content {
     position: relative;
-    width: 100%;
+    width: 100vw;
     display: flex;
     padding: 20px 0;
     background-color: #090d0f;

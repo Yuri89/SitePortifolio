@@ -10,7 +10,7 @@ import Projetos from './Components/Projetos'
 export function App() {
 
   return (
-    <section className='app'>
+    <main className='app'>
       <Header/>
       <Banner/>
       <Apresentacao/>
@@ -18,6 +18,6 @@ export function App() {
       <Tecnologias/>
       <Projetos/>
       <Footer/>
-    </section>
+    </main>
   )
 }

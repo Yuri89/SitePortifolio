@@ -1,3 +1,8 @@
+import Email from '../../Assets/svgs/icones/Email'
+import Github from '../../Assets/svgs/icones/Github'
+import Linkedin from '../../Assets/svgs/icones/Linkedin'
+import Location from '../../Assets/svgs/icones/Location'
+import Phone from '../../Assets/svgs/icones/Phone'
 import './style.css'
 
 export default function Footer() {
@@ -6,22 +11,37 @@ export default function Footer() {
             <h1 className='title'>Contato</h1>
             <span className='info-box'>
                 <p className='info'>
-                    São Caetano do sul, SP <br />
+                    <picture className='icon-info'>
+                        <Location />
+                    </picture>
+                    São Caetano do sul, SP
                 </p>
                 <p className='info'>
-                    +55 11 94739-3030 <br />
+                    <picture className='icon-info'>
+                        <Phone />
+                    </picture>
+                    +55 11 94739-3030
                 </p>
                 <p className='info'>
-                    yuriopentowork@gmail.com
+                    <picture className='icon-info'>
+                        <Email />
+                    </picture>
+                    yurisouzabarros@gmail.com
                 </p>
             </span>
             <nav>
                 <ul className='footer-links' id={"contato"}>
                     <li className="link-box-about">
+                        <picture className='icon-info'>
+                            <Linkedin />
+                        </picture>
                         <a href="https://www.linkedin.com/in/yuri-barros-b3461a239" className="link-about">linkedin</a>
                         <div className='details'></div>
                     </li>
                     <li className="link-box-about">
+                        <picture className='icon-info'>
+                            <Github />
+                        </picture>
                         <a href="https://github.com/Yuri89" className="link-about">github</a>
                         <div className='details'></div>
                     </li>

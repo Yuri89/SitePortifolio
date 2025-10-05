@@ -7,36 +7,20 @@
   position: relative;
   overflow: hidden;
   background-color: #0F171D;
-  z-index: -5;
 }
 
 .formacao-box {
   position: relative;
-  width: 70%;
-  height: 70%;
+  width: 90%;
   padding: 40px;
 
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .title-formacao {
   font-family: 'NicoMoji', sans-serif;
   position: relative;
-}
-
-.title-formacao::after {
-  content: "";
-  position: absolute;
-  width: 35px;
-  height: 3px;
-  background-color: #ffffff;
-  right: 82px;
-  transform: translateX(-50%);
-  top: 14px;
-  border-radius: 100px;
 }
 
 .element-pilar {
@@ -54,7 +38,6 @@
   background: conic-gradient(from -88.2deg at 19.96% 53.3%, #009AFF 0deg, rgba(0, 0, 0, 0) 360deg), linear-gradient(179.58deg, #11171D 11.8%, #00416B 52.46%, #11171D 90.1%);
   box-shadow: 0px 54px 58.9px -32px rgba(6, 157, 233, 0.48), 0px 4px 250px 130px rgba(0, 48, 76, 0.14);
   transform: rotate(43.25deg);
-  z-index: -1;
 }
 
 .element-pilar::before {
@@ -74,12 +57,87 @@
   pointer-events: none;
 }
 
-@media (max-width: 805px) {
-  .instituicao {
+
+.acento {
+  position: relative;
+  display: inline;
+}
+
+.tio::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: calc(var(--font-body) - 13px);
+  background-color: #ffffff;
+  transform: translateX(-50%);
+  top: 25%;
+  left: 50%;
+  border-radius: 100px;
+}
+
+.cedilha::after {
+  content: "";
+  position: absolute;
+  width: 30%;
+  height: calc(var(--font-body) - 13px);
+  background-color: #ffffff;
+  transform: translateX(-50%) rotate(90deg);
+  bottom: 0;
+  left: 50%;
+  border-radius: 0px 100px 100px 0px;
+}
+
+.nav-formacao {
+  position: relative;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-formacao>button {
+  background: none;
+  border: 3px double rgba(255, 255, 255, 0.623);
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 200ms;
+}
+
+.nav-formacao>button:hover {
+  transform: scale(1.2);
+  background-color: #0099ffa8;
+}
+
+.nav-formacao>button:active {
+  transform: scale(1.2);
+  background-color: #0099ffa8;
+  transition: all 5ms;
+}
+
+.icon-formacao>svg {
+  width: 100%;
+}
+
+.referencia {
+  text-decoration: underline;
+}
+
+@media (max-width: 1200px) {
+  .icon-formacao {
     display: none;
+  }
+
+  .formacao-box {
+    display: flex;
+    width: 60%;
   }
 
   .formacao-content {
     width: 100vw;
+  }
+}
+
+@media (max-width: 700px) {
+  .formacao-box {
+    width: 80%;
   }
 }

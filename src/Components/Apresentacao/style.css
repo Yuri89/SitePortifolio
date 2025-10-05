@@ -9,8 +9,6 @@
 
 }
 
-
-
 .apresentacao-box {
     position: relative;
     width: 70%;
@@ -38,7 +36,6 @@
 .foto {
     padding-left: 50px;
 }
-
 
 
 @media (max-width: 1213px) {

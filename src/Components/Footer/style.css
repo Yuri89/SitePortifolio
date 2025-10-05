@@ -1,4 +1,4 @@
-.footer{
+.footer {
     position: relative;
     background-color: #0a1c26;
     margin-top: 80px;
@@ -8,7 +8,7 @@
     z-index: 1;
 }
 
-.footer-links{
+.footer-links {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,42 +19,97 @@
     z-index: 1;
 }
 
-.footer-links li{
-    position: relative;
-    height: 25px;
+
+
+
+.marca {
+    text-align: center;
 }
 
-.footer-links a{
+.info-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.info::after {
+    content: '';
+    position: absolute;
+    top: -8px;
+    right: -5%;
+    border-top: white 3px solid;
+    border-right: white 3px solid;
+    border-bottom: white 3px solid;
+    height: 100%;
+    width: 10%;
+    transform: skewX(-20deg);
+}
+
+.info::before {
+    content: '';
+    position: absolute;
+    top: 2.5px;
+    left: -5%;
+    border-top: white 3px solid;
+    border-right: white 3px solid;
+    border-bottom: white 3px solid;
+    height: 100%;
+    width: 10%;
+    transform: skewX(-20deg) rotate(180deg);
+}
+
+.info {
+    position: relative;
+    padding: 5px;
+    border-top: white 1px solid;
+    border-bottom: white 1px solid;
+}
+
+/* .info:nth-child(1){
+    border-left: white 1px solid;
+}
+
+.info:nth-child(3){
+    border-right: white 1px solid;
+} */
+
+.link-box-about {
+    position: relative;
+    background-color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 5px 5px 0px 0px;
+    cursor: pointer;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.link-about {
     position: relative;
     text-decoration: none;
-    color: #ffffff;
-    font-size: 18px;
+    color: #000;
     transition: all 0.3s ease-in-out;
     z-index: 3;
 }
 
-.footer-links li:hover a{
-    color: #004852;
-    font-size: 20px;
-}
-
-.details{
+.details {
     position: absolute;
     width: 100%;
-    height: 12px; /* altura do quadrado/retângulo */
-    background-color: #00bcd4;
+    height: 10%;
+    /* altura do quadrado/retângulo */
+    background-color: #00bbd4c9;
     left: 0;
-    bottom: 0; /* ajusta a distância do texto */
+    bottom: 0;
+    /* ajusta a distância do texto */
     transition: all 0.3s ease-in-out;
     z-index: 2;
 }
 
-.footer-links li:hover .details {
-    height: 25px;
-    background-color: #61e5f7;
-    transform: scale(1.3);
+.link-box-about:hover .details{
+    height: 100%;
 }
 
-.marca{
-    text-align: center;
+
+.link-box-about:hover .link-about {
+    color: #ffffff;
 }

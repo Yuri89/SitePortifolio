@@ -19,37 +19,20 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  /* Corpo do texto */
-  --font-body: clamp(1rem, 3vw, 1.2rem);
+  --font-h1: clamp(2.5rem, 8vw, 5rem);
+  --font-h2: clamp(1.8rem, 5vw, 3rem);
+  --font-h3: clamp(1.3rem, 3vw, 2rem);
+  --font-body: clamp(1rem, 2vw, 1.2rem);
 
-  /* Hierarquia de títulos */
-  --font-h1: clamp(3rem, 10vw, 5.5rem);
-  --font-h2: clamp(2rem, 5vw, 1.5rem);
-  --font-h3: clamp(1rem, 5vw, 1.2rem);
 }
 
-h1,
-h2 {
-  font-size: var(--font-h1);
-}
+h1 { font-size: var(--font-h1); }
+h2 { font-size: var(--font-h2); }
+h3, h4, h5, h6 { font-size: var(--font-h3); }
 
-h3 {
-  font-size: var(--font-h2);
-}
+h1, h2, h3, h4, h5, h6 { line-height: 1.2; }
+p, li, span, a, button { line-height: 1.6; }
 
-h4,
-h5,
-h6 {
-  font-size: var(--font-h3);
-}
-
-p,
-span,
-li,
-a,
-button {
-  font-size: var(--font-body);
-}
 
 body {
   margin: 0;

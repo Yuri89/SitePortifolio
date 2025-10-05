@@ -6,6 +6,7 @@
 
     display: flex;
     flex-direction: row;
+    justify-content: center;
     background-color: #080F13;
     z-index: -5;
 
@@ -24,6 +25,7 @@
     position: relative;
     padding: 0px 120px;
     width: 100%;
+    max-width: 1400px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -45,10 +47,10 @@
     /* Rectangle 28 */
 
     position: absolute;
-    width: 356.2px;
-    height: 1196.74px;
+    width: 25vw;
+    height: 150vh;
     left: 35%;
-    top: -60%;
+    top: -40%;
 
     background: linear-gradient(180.89deg, #091115 20.2%, rgba(0, 0, 0, 0) 60.1%, #091115 99.24%), radial-gradient(74.49% 74.49% at 86.54% 56.56%, #0F4366 0%, #080F13 100%)
         /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
@@ -63,10 +65,10 @@
     /* Rectangle 32 */
 
     position: absolute;
-    width: 356.2px;
-    height: 1196.74px;
+    width: 25vw;
+    height: 150vh;
     left: 55%;
-    top: -60%;
+    top: -40%;
 
     background: linear-gradient(180.89deg, #091115 20.2%, rgba(0, 0, 0, 0) 60.1%, #091115 99.24%), radial-gradient(79.79% 80.26% at 105.83% 50.8%, #0F4366 0%, #080F13 100%)
         /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
@@ -79,10 +81,10 @@
     /* Rectangle 31 */
 
     position: absolute;
-    width: 356.2px;
-    height: 1196.74px;
+    width: 25vw;
+    height: 150vh;
     left: 15%;
-    top: -60%;
+    top: -30%;
 
     background: linear-gradient(180.89deg, #091115 20.2%, rgba(0, 0, 0, 0) 60.1%, #091115 99.24%), radial-gradient(45.92% 46.75% at 81.27% 40.17%, #0F4366 0%, #080F13 100%)
         /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
@@ -114,6 +116,7 @@
     text-align: left;
     z-index: 1;
 }
+
 
 @media (max-width: 1285px) {
     .banner-container-x {
@@ -164,8 +167,8 @@
 }
 
 @media (max-width: 639px) {
-        .text-banner {
-    top: clamp(-20px, 0vw - 100px, 40px);
+    .text-banner {
+        top: clamp(-20px, 0vw - 100px, 40px);
     }
 
 }

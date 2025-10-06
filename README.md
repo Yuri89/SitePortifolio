@@ -11,3 +11,8 @@ npm run dev -- --port 3000
 ```
 
 !!Lembrando que esses comandos é só para o vite, em outros frameworks pode variar!!
+
+
+## Testes de Acessibilidade e Perfomace
+
+![Teste da imagem](./doc/images/test1.png)

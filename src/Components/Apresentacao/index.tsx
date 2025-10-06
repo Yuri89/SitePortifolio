@@ -17,7 +17,7 @@ export default function Apresentacao() {
                 </p>
                 </span>
                 <div  className='foto'>
-                <img src={Foto} loading="lazy" alt="Foto de Yuri Barros Sorrindo"/>
+                <img src={Foto} loading="lazy" alt="Foto de Yuri Barros Sorrindo" decoding="async"/>
                 </div>
             </section>
         </section>

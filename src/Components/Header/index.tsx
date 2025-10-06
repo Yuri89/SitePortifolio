@@ -56,11 +56,11 @@ export default function Header() {
 
                 {/* links */}
                 <ul className={`links-display ${className[0]}`} aria-hidden={className[0] === 'open' ? 'true' : 'false'}>
-                    <li><a onClick={(e) => { e.preventDefault(); handleScroll("apresentacao")}} className="link-header">Apresentacao</a></li>
-                    <li><a onClick={(e) => { e.preventDefault(); handleScroll("formacao")}} className="link-header">Formacao</a></li>
-                    <li><a onClick={(e) => { e.preventDefault(); handleScroll("tecnologias")}} className="link-header">Tecnologias</a></li>
-                    <li><a onClick={(e) => { e.preventDefault(); handleScroll("projetos")}} className="link-header">Projetos</a></li>
-                    <li><a onClick={(e) => { e.preventDefault(); handleScroll("contato")}} className="link-header">Contato</a></li>
+                    <li><a onClick={(e) => { e.preventDefault(); handleScroll("apresentacao")}} className="link-header" href='#apresentacao'>Apresentacao</a></li>
+                    <li><a onClick={(e) => { e.preventDefault(); handleScroll("formacao")}} className="link-header" href='#formacao'>Formacao</a></li>
+                    <li><a onClick={(e) => { e.preventDefault(); handleScroll("tecnologias")}} className="link-header" href='#tecnologias'>Tecnologias</a></li>
+                    <li><a onClick={(e) => { e.preventDefault(); handleScroll("projetos")}} className="link-header" href='#projetos'>Projetos</a></li>
+                    <li><a onClick={(e) => { e.preventDefault(); handleScroll("contato")}} className="link-header" href='#contato'>Contato</a></li>
                 </ul>
             </nav>
         </header>

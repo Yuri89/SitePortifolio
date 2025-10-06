@@ -4,30 +4,30 @@ import './style.css'
 
 export default function Projetos() {
 
-    const [hover, setHover] = useState<[boolean,boolean,boolean]>([false, false, false])
+    const [hover, setHover] = useState<[boolean, boolean, boolean]>([false, false, false])
     const [estado, setEstado] = useState(false);
     const tooltipRef = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
-    function handleClickOutside(event: MouseEvent) {
-      if (
-        tooltipRef.current &&
-        !tooltipRef.current.contains(event.target as Node)
-      ) {
-        setEstado(false);
-      }
-    }
+        function handleClickOutside(event: MouseEvent) {
+            if (
+                tooltipRef.current &&
+                !tooltipRef.current.contains(event.target as Node)
+            ) {
+                setEstado(false);
+            }
+        }
 
-    if (estado) {
-      document.addEventListener("mousedown", handleClickOutside);
-    } else {
-      document.removeEventListener("mousedown", handleClickOutside);
-    }
+        if (estado) {
+            document.addEventListener("mousedown", handleClickOutside);
+        } else {
+            document.removeEventListener("mousedown", handleClickOutside);
+        }
 
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [open]);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [open]);
 
 
     return (
@@ -50,6 +50,7 @@ export default function Projetos() {
                         <span className='card'
                             onMouseEnter={() => setHover([true, false, false])}
                             onMouseLeave={() => setHover([false, false, false])}
+                            role="listitem"
                         >
                             <div className={`description ${!hover[0] && 'description-hover'}`}>
                                 <Pallet />
@@ -65,6 +66,7 @@ export default function Projetos() {
                         <span className='card'
                             onMouseEnter={() => setHover([false, true, false])}
                             onMouseLeave={() => setHover([false, false, false])}
+                            role="listitem"
                         >
                             <div className={`description ${!hover[1] && 'description-hover'}`}>
                                 <Pallet />
@@ -80,6 +82,7 @@ export default function Projetos() {
                         <span className='card'
                             onMouseEnter={() => setHover([false, false, true])}
                             onMouseLeave={() => setHover([false, false, false])}
+                            role="listitem"
                         >
                             <div className={`description ${!hover[2] && 'description-hover'}`}>
                                 <Pallet />

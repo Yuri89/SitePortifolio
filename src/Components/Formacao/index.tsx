@@ -25,8 +25,9 @@ export default function Formacao() {
                 <>
                     <h2 className='title-formacao'>Forma<p className='acento cedilha'>c</p><p className='acento tio'>a</p>o</h2>
                     <span className='formacao-item'>
-                        <h3>Analise e Desenvolvimento de Sistemas</h3>
-                        <h4>2023 - 2025</h4>
+                        <h3>Estácio</h3>
+                        <h4>Analise e Desenvolvimento de Sistemas</h4>
+                        <p>2023 - 2025</p>
                         <p>Polo São Caetano do sul - EAD</p>
                         <p>
                             Durante o curso, aprendi em profundidade como funciona o processamento de dados dentro do computador, desde o compilador até o kernel.
@@ -44,7 +45,8 @@ export default function Formacao() {
                     <h2 className='title-formacao'>Profissionalizante</h2>
                     <span className='formacao-item'>
                         <h3>SENAI + Fundação Volkswagen</h3>
-                        <h4>2023 - 2024</h4>
+                        <h4>Full-Stack + Mobile</h4>
+                        <p>2023 - 2024</p>
                         <p>Rua Niterói - Centro, São Caetano do Sul — Presencial</p>
                         <p>
                             Curso voltado para o desenvolvimento de aplicações web utilizando as tecnologias mais recentes do mercado, como React, Spring e MySQL.
@@ -102,7 +104,7 @@ export default function Formacao() {
 
                 <picture className='icon-formacao'>{contentIcon}</picture>
 
-                <span>
+                <span aria-label='Slider de Formação' aria-live="polite">
                     {contentText}
                     <nav className='nav-formacao'>
                         <button onClick={handlePageDown}>Voltar</button>

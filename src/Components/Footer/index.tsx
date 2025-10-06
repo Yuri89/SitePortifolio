@@ -20,7 +20,7 @@ export default function Footer() {
                     <picture className='icon-info'>
                         <Phone />
                     </picture>
-                    +55 11 94739-3030
+                    +55 11 95453-2661
                 </p>
                 <p className='info'>
                     <picture className='icon-info'>
@@ -31,20 +31,24 @@ export default function Footer() {
             </span>
             <nav>
                 <ul className='footer-links' id={"contato"}>
-                    <li className="link-box-about">
-                        <picture className='icon-info'>
-                            <Linkedin />
-                        </picture>
-                        <a href="https://www.linkedin.com/in/yuri-barros-b3461a239" className="link-about">linkedin</a>
-                        <div className='details'></div>
-                    </li>
-                    <li className="link-box-about">
-                        <picture className='icon-info'>
-                            <Github />
-                        </picture>
-                        <a href="https://github.com/Yuri89" className="link-about">github</a>
-                        <div className='details'></div>
-                    </li>
+                    <a href="https://www.linkedin.com/in/yuri-barros-b3461a239">
+                        <li className="link-box-about">
+                            <picture className='icon-info'>
+                                <Linkedin />
+                            </picture>
+                            <span className="link-about">linkedin</span>
+                            <div className='details'></div>
+                        </li>
+                    </a>
+                    <a href="https://github.com/Yuri89">
+                        <li className="link-box-about">
+                            <picture className='icon-info'>
+                                <Github />
+                            </picture>
+                            <span className="link-about">github</span>
+                            <div className='details'></div>
+                        </li>
+                    </a>
                 </ul>
             </nav>
             <p className='marca' role="note" dir='auto'>© 2025 Yuri de Souza Barros. Todos os direitos reservados.</p>

@@ -45,7 +45,7 @@ export default function Projetos() {
                         <h2 className='title'>Projetos</h2>
                     </div>
 
-                    <div className='projetos-cards'>
+                    <div className='projetos-cards' role='list' aria-label='lista de cards de projetos'>
 
                         <span className='card'
                             onMouseEnter={() => setHover([true, false, false])}

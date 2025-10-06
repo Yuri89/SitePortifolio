@@ -12,8 +12,8 @@ export default function Tecnologias() {
 
     return (
         <section className='tecnologias-content' id={"tecnologias"}>
-            <h1 className='title'>Tecnologias</h1>
-            <section className='tecnologias-box'>
+            <h2 className='title'>Tecnologias</h2>
+            <section className='tecnologias-box' role='list' aria-label='lista de tecnologias'>
                 <div className={className}>
                     <Spring />
                     <p>Spring Framework</p>

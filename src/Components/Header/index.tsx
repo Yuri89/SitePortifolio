@@ -44,22 +44,23 @@ export default function Header() {
             className={`navigation nav-${className[1]}`}
             onMouseEnter={() => setHovered(true)}
             onMouseLeave={() => setHovered(false)}
+            aria-label='Navegação da página'
         >
-            <nav>
+            <nav role='navigation' aria-label="Navegação principal">
                 {/* pontos */}
-                <div className={`links-display ${className[1]}`}>
+                <div className={`links-display ${className[1]}`} aria-hidden={className[1] === 'open' ? 'true' : 'false'}>
                     <div className="ponto"></div>
                     <div className="ponto"></div>
                     <div className="ponto"></div>
                 </div>
 
                 {/* links */}
-                <ul className={`links-display ${className[0]}`}>
-                    <li><a onClick={() => handleScroll("apresentacao")} className="link-header">Apresentacao</a></li>
-                    <li><a onClick={() => handleScroll("formacao")} className="link-header">Formacao</a></li>
-                    <li><a onClick={() => handleScroll("tecnologias")} className="link-header">Tecnologias</a></li>
-                    <li><a onClick={() => handleScroll("projetos")} className="link-header">Projetos</a></li>
-                    <li><a onClick={() => handleScroll("contato")} className="link-header">Contato</a></li>
+                <ul className={`links-display ${className[0]}`} aria-hidden={className[0] === 'open' ? 'true' : 'false'}>
+                    <li><a onClick={(e) => { e.preventDefault(); handleScroll("apresentacao")}} className="link-header">Apresentacao</a></li>
+                    <li><a onClick={(e) => { e.preventDefault(); handleScroll("formacao")}} className="link-header">Formacao</a></li>
+                    <li><a onClick={(e) => { e.preventDefault(); handleScroll("tecnologias")}} className="link-header">Tecnologias</a></li>
+                    <li><a onClick={(e) => { e.preventDefault(); handleScroll("projetos")}} className="link-header">Projetos</a></li>
+                    <li><a onClick={(e) => { e.preventDefault(); handleScroll("contato")}} className="link-header">Contato</a></li>
                 </ul>
             </nav>
         </header>
